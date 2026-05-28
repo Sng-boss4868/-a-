@@ -14,7 +14,7 @@
     --color-dark-bg: #1A1D1A;        /* Dark Theme Backgrounds */
     --color-light: #F7F9F6;          /* Airy Pale Ecological Gray/Green */
     --color-white: #FFFFFF;          /* Pure White */
-    --color-gray: #555E55;           /* Slate / Description Text */
+    --color-gray: #2D3436;           /* Slate / Description Text */
     --color-border: #D0DDD2;         /* Sagely Outline Border - 2px compatible */
     
     /* Typography */
@@ -121,7 +121,7 @@ ul, ol {
 .bg-green-soft { background-color: var(--color-secondary); }
 
 .text-white { color: var(--color-white) !important; }
-.text-light-gray { color: #BECAC0 !important; }
+.text-light-gray { color: #F4F7F4 !important; }
 .text-center { text-align: center; }
 
 /* Grid Generators */
@@ -161,8 +161,7 @@ ul, ol {
     display: inline-block;
     font-size: 0.8rem;
     font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 0.5px;
     color: var(--color-primary);
     background-color: var(--color-secondary);
     padding: 6px 16px;
@@ -180,12 +179,13 @@ ul, ol {
     font-size: 2.5rem;
     font-weight: 800;
     line-height: 1.2;
-    color: var(--color-primary);
+    color: var(--color-dark);
     margin-bottom: 20px;
 }
 
 .section-subtitle {
     font-size: 1.1rem;
+    font-weight: 500;
     color: var(--color-gray);
     line-height: 1.6;
 }
@@ -194,12 +194,13 @@ ul, ol {
     font-size: 1.3rem;
     font-weight: 600;
     line-height: 1.5;
-    color: var(--color-primary);
+    color: var(--color-dark);
     margin-bottom: 20px;
 }
 
 .section-text {
     font-size: 1rem;
+    font-weight: 500;
     color: var(--color-gray);
     margin-bottom: 24px;
     line-height: 1.7;
@@ -303,14 +304,14 @@ ul, ol {
 /* Scroll Animation Trigger */
 .fade-in-up {
     opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateY(24px) scale(0.985);
+    transition: opacity 0.95s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.95s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .fade-in-up.active {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
 }
 
 /* ==========================================================================
@@ -323,9 +324,7 @@ ul, ol {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background-color: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
+    background-color: var(--color-white);
     border-bottom: 1px solid var(--color-border);
     transition: var(--transition-smooth);
     padding: 16px 0;
@@ -444,9 +443,7 @@ ul, ol {
         left: 0;
         width: 100vw;
         height: 100vh;
-        background-color: rgba(18, 21, 18, 0.4);
-        backdrop-filter: blur(4px);
-        -webkit-backdrop-filter: blur(4px);
+        background-color: rgba(18, 21, 18, 0.6);
         z-index: 998;
         opacity: 0;
         pointer-events: none;
@@ -560,39 +557,40 @@ ul, ol {
 }
 
 .hero-subtitle {
-    font-size: 1.35rem;
+    font-size: 1.4rem;
     line-height: 1.5;
-    font-weight: 400;
-    color: #E2ECE4;
-    margin-bottom: 35px;
+    font-weight: 600;
+    color: var(--color-white);
+    margin-bottom: 40px;
 }
 
 @media (max-width: 768px) {
     .hero-subtitle {
-        font-size: 1.1rem;
+        font-size: 1.15rem;
     }
 }
 
 .hero-advantages {
-    margin-bottom: 40px;
+    margin-bottom: 45px;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 16px;
 }
 
 .hero-advantages li {
     display: flex;
     align-items: center;
-    gap: 12px;
-    font-size: 1.05rem;
-    font-weight: 500;
-    color: #F0F5F1;
+    gap: 14px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-white);
 }
 
 .icon-checkmark {
     color: var(--color-accent);
-    font-weight: bold;
-    font-size: 1.1rem;
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.25rem;
 }
 
 .hero-actions-row {
@@ -607,106 +605,17 @@ ul, ol {
     }
 }
 
-.hero-bottom-bar {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(18, 21, 18, 0.7);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-    padding: 20px 0;
-    z-index: 10;
-}
-
-.hero-bottom-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    color: var(--color-white);
-}
-
-.bottom-stat {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.stat-num {
-    font-family: var(--font-heading);
-    font-size: 2.2rem;
-    font-weight: 800;
-    color: var(--color-accent);
-    white-space: nowrap;
-}
-
-.plus-sign {
-    display: inline-block;
-    vertical-align: middle;
-    position: relative;
-    top: -0.28em; /* Raised slightly more to align perfectly with the horizontal center of the zero digit */
-    margin-left: 2px;
-    font-size: 0.85em;
-}
-
-.stat-txt {
-    font-size: 0.85rem;
-    font-weight: 500;
-    color: #CFDCD1;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    line-height: 1.2;
-}
-
 @media (max-width: 768px) {
     .hero-section {
         height: auto;
         min-height: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: stretch;
-        padding-top: 130px; /* Raised spacing to prevent fixed header from overlapping the yellow badge badge */
-        padding-bottom: 0;
-        overflow: visible;
+        padding-top: 130px;
+        padding-bottom: 60px;
     }
     
     .hero-container-content {
         margin-top: 0;
-        margin-bottom: 40px;
-        padding-bottom: 10px;
-    }
-
-    .hero-bottom-bar {
-        position: relative;
-        background-color: var(--color-primary);
-        padding: 30px 0;
-        backdrop-filter: none;
-        -webkit-backdrop-filter: none;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        z-index: 10;
-        width: 100%;
-        margin: 0;
-        left: 0;
-    }
-    
-    .hero-bottom-container {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 24px;
-    }
-    
-    .bottom-stat {
-        flex: 0 0 calc(50% - 12px);
-        flex-direction: column;
-        text-align: center;
-        gap: 4px;
-    }
-    
-    .bottom-stat:last-child {
-        flex: 0 0 100%;
+        margin-bottom: 0;
     }
 }
 
@@ -747,16 +656,21 @@ ul, ol {
 
 /* Collage Mosaic Styles */
 .image-grid-mosaic {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, 1fr);
-    height: 480px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: auto;
+    padding: 20px 0;
 }
 
 .mosaic-item {
+    flex: 1;
     border-radius: var(--radius-large);
     overflow: hidden;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    transition: var(--transition-smooth);
+    height: 380px;
 }
 
 .mosaic-item img {
@@ -766,32 +680,38 @@ ul, ol {
 }
 
 .mosaic-item.item-1 {
-    grid-column: 1 / 8;
-    grid-row: 1 / 8;
-    z-index: 3;
+    transform: rotate(-3deg) translateY(5px);
 }
 
 .mosaic-item.item-2 {
-    grid-column: 6 / 13;
-    grid-row: 5 / 13;
-    z-index: 2;
+    transform: rotate(2deg) translateY(-5px);
 }
 
 .mosaic-item.item-3 {
-    grid-column: 1 / 6;
-    grid-row: 7 / 13;
-    z-index: 4;
-    border: 5px solid var(--color-white); /* Elegant overlap separation */
+    transform: rotate(-1.5deg) translateY(8px);
+}
+
+.mosaic-item:hover {
+    transform: scale(1.06) rotate(0deg) translateY(-10px) !important;
+    z-index: 10;
+    box-shadow: 0 25px 50px rgba(30, 63, 32, 0.15);
 }
 
 @media (max-width: 576px) {
     .image-grid-mosaic {
-        height: 350px;
+        flex-direction: column;
+        gap: 24px;
+        padding: 0;
+    }
+    .mosaic-item {
+        width: 100%;
+        height: 280px;
+        transform: none !important;
     }
 }
 
 /* ==========================================================================
-   SCREEN 3: WHY QINGDAO (SLIDER GALLERY)
+   SCREEN 3: WHY QINGDAO (EDITORIAL ASYMMETRICAL COLLAGE)
    ========================================================================== */
 
 .qingdao-content {
@@ -802,103 +722,75 @@ ul, ol {
 
 .qingdao-text-block {
     text-align: center;
-    max-w: 700px;
+    max-width: 750px;
     margin-left: auto;
     margin-right: auto;
+    font-weight: 500;
 }
 
-.qingdao-gallery-slider {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    padding-bottom: 20px;
-}
-
-.gallery-wrapper {
-    display: flex;
+.qingdao-editorial-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
     gap: 24px;
-    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-    will-change: transform;
+    margin-top: 40px;
 }
 
-.gallery-slide {
-    flex: 0 0 calc(33.333% - 16px);
+.editorial-item {
     border-radius: var(--radius-large);
-    height: 380px;
     position: relative;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
 }
 
-@media (max-width: 992px) {
-    .gallery-slide {
-        flex: 0 0 calc(50% - 12px);
-        height: 320px;
-    }
+.editorial-item.item-large {
+    height: 480px;
 }
 
-@media (max-width: 576px) {
-    .gallery-slide {
-        flex: 0 0 100%;
-        height: 280px;
-    }
+.editorial-sub-grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 24px;
 }
 
-.gallery-slide img {
+.editorial-item.item-small {
+    height: 228px;
+}
+
+.editorial-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.gallery-caption {
+.editorial-caption {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 24px;
+    padding: 20px;
     background: linear-gradient(to top, rgba(18, 21, 18, 0.8) 0%, rgba(18, 21, 18, 0) 100%);
     color: var(--color-white);
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 600;
-    border-bottom-left-radius: var(--radius-large);
-    border-bottom-right-radius: var(--radius-large);
 }
 
-.slider-nav {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    margin-top: 30px;
-}
-
-.btn-arrow {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: var(--color-white);
-    color: var(--color-primary);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: var(--transition-smooth);
-}
-
-.btn-arrow:hover {
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    transform: scale(1.05);
+@media (max-width: 768px) {
+    .qingdao-editorial-grid {
+        grid-template-columns: 1fr;
+    }
+    .editorial-item.item-large {
+        height: 300px;
+    }
+    .editorial-item.item-small {
+        height: 200px;
+    }
 }
 
 /* ==========================================================================
-   SCREEN 4: WHAT IS INCLUDED IN THE PROGRAM (CARDS)
+   SCREEN 4: WHAT IS INCLUDED IN THE PROGRAM (CARDS & RYHTHM)
    ========================================================================== */
 
 .program-card {
-    background-color: var(--color-light);
-    border: 2px solid var(--color-border);
     border-radius: var(--radius-large);
     padding: 40px 30px;
     display: flex;
@@ -907,13 +799,29 @@ ul, ol {
     box-shadow: var(--shadow-card);
 }
 
-.program-card:nth-child(even) {
+.program-card-outline-1 {
+    background-color: transparent;
+    border: 2px solid var(--color-border);
+}
+
+.program-card-solid-1 {
     background-color: var(--color-secondary);
-    border-color: rgba(30, 63, 32, 0.12);
+    border: 2px solid transparent;
+}
+
+.program-card-outline-2 {
+    background-color: transparent;
+    border: 2px solid var(--color-border);
+}
+
+.program-card-solid-2 {
+    background-color: var(--color-light);
+    border: 2px solid transparent;
 }
 
 .card-icon {
     font-size: 2.2rem;
+    color: var(--color-primary);
 }
 
 .card-title {
@@ -926,29 +834,47 @@ ul, ol {
 .card-list {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 8px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .card-list li {
     font-size: 0.95rem;
-    color: var(--color-gray);
+    font-weight: 500;
+    color: var(--color-dark) !important;
     position: relative;
-    padding-left: 20px;
-    line-height: 1.5;
+    line-height: 1.15;
+    padding-left: 0 !important;
 }
 
 .card-list li::before {
-    content: "•";
-    color: var(--color-primary);
-    font-size: 1.2rem;
-    position: absolute;
-    left: 0;
-    top: -2px;
+    display: none !important;
+}
+
+.tight-line-90 {
+    line-height: 0.9 !important;
 }
 
 /* ==========================================================================
-   SCREEN 5: ADVANTAGES (DARK BLOCKS GRID)
+   SCREEN 5: ADVANTAGES (ASIMMETRICAL BENTO GRID)
    ========================================================================== */
+
+.advantages-bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.adv-span-2 {
+    grid-column: span 2;
+}
+
+.adv-span-1 {
+    grid-column: span 1;
+}
 
 .advantage-item {
     background-color: rgba(255, 255, 255, 0.03);
@@ -960,9 +886,15 @@ ul, ol {
     align-items: flex-start;
 }
 
-.adv-emoji {
+.advantage-item.adv-span-2 {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: rgba(232, 239, 233, 0.15);
+}
+
+.adv-icon {
     font-size: 2.2rem;
     line-height: 1;
+    color: var(--color-primary);
 }
 
 .adv-title {
@@ -975,8 +907,24 @@ ul, ol {
 
 .adv-desc {
     font-size: 0.95rem;
-    color: #BECAC0;
+    font-weight: 500;
+    color: #F4F7F4 !important;
     line-height: 1.6;
+}
+
+@media (max-width: 992px) {
+    .advantages-bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .adv-span-2, .adv-span-1 {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 576px) {
+    .advantages-bento-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* ==========================================================================
@@ -1063,8 +1011,7 @@ ul, ol {
     font-size: 0.8rem;
     font-weight: 700;
     color: var(--color-accent);
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     margin-bottom: 10px;
 }
 
@@ -1072,7 +1019,7 @@ ul, ol {
     font-family: var(--font-heading);
     font-size: 1.3rem;
     font-weight: 700;
-    color: var(--color-primary);
+    color: var(--color-dark);
     margin-bottom: 12px;
 }
 
@@ -1115,188 +1062,307 @@ ul, ol {
 }
 
 /* ==========================================================================
-   SCREEN 7: SCHEDULE (INTERACTIVE DAYS CALENDAR)
+   SCREEN 7: SCHEDULE (PREMIUM TENNIS-STYLE CATALOG GRIDS)
    ========================================================================== */
 
-.schedule-tabs-container {
-    background-color: var(--color-white);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-large);
-    padding: 40px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.02);
-    margin-top: 40px;
+
+
+/* Tennis-Style Card Grid */
+.schedule-tennis-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 20px;
 }
 
-@media (max-width: 576px) {
-    .schedule-tabs-container {
-        padding: 24px 16px;
-    }
+.tennis-day-card {
+    background-color: var(--color-light);
+    border: 2px solid var(--color-border);
+    border-radius: 32px;
+    padding: 35px 35px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+    box-shadow: var(--shadow-card);
+    transition: var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
 }
 
-.days-switcher-wrapper {
+.tennis-day-card:hover {
+    transform: translateY(-8px);
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    box-shadow: 0 15px 35px rgba(71, 128, 60, 0.35);
+}
+
+.day-card-top {
+    display: flex;
+    flex-direction: column;
+}
+
+.day-card-header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    border-bottom: 1px solid var(--color-border);
-    padding-bottom: 24px;
-    margin-bottom: 35px;
+    gap: 8px;
+    width: 100%;
 }
 
-.days-switcher {
-    display: flex;
-    gap: 10px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    padding-bottom: 8px;
-    scrollbar-width: none; /* Hide scrollbar for Firefox */
-    
-    /* Premium horizontal scroll border fade effect to prevent hard clipping */
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 30px, black calc(100% - 30px), transparent 100%);
-    mask-image: linear-gradient(to right, transparent 0%, black 30px, black calc(100% - 30px), transparent 100%);
+/* Rounded Tennis Pills */
+/* Rounded Tennis Pills */
+.pill {
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: var(--radius-pill);
+    display: inline-block;
+    transition: var(--transition-smooth);
 }
 
-.days-switcher::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for Chrome/Safari */
-}
-
-.arrow-switch {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background-color: var(--color-light);
+.pill-green {
+    background-color: rgba(71, 128, 60, 0.12);
     color: var(--color-primary);
+    transition: var(--transition-smooth);
+}
+
+.tennis-day-card:hover .pill-green {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+}
+
+.pill-white {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+}
+
+.pill-outline {
+    border: 1px solid var(--color-border);
+    color: var(--color-primary);
+    transition: var(--transition-smooth);
+}
+
+.tennis-day-card:hover .pill-outline {
+    border-color: rgba(255, 255, 255, 0.4);
+    color: var(--color-white);
+}
+
+.pill-outline-white {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: var(--color-white);
+}
+
+.top-card-icon {
+    margin-left: auto;
+    font-size: 1.4rem;
+    color: var(--color-primary);
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: var(--color-white);
     border: 1px solid var(--color-border);
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
-    font-size: 1.2rem;
-    font-weight: bold;
-    flex-shrink: 0;
-    transition: var(--transition-fast);
-}
-
-.arrow-switch:hover {
-    background-color: var(--color-primary);
-    color: var(--color-white);
-}
-
-.day-tab {
-    padding: 10px 20px;
-    border-radius: var(--radius-pill);
-    background-color: var(--color-light);
-    border: 1px solid var(--color-border);
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--color-gray);
-    white-space: nowrap;
-    cursor: pointer;
     transition: var(--transition-smooth);
 }
 
-.day-tab:hover {
-    background-color: var(--color-secondary-hover);
-    color: var(--color-primary);
-}
-
-.day-tab.active {
-    background-color: var(--color-primary);
+.tennis-day-card:hover .top-card-icon {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: transparent;
     color: var(--color-white);
-    border-color: var(--color-primary);
 }
 
-/* Schedule Panel Transition Effect (USER REQUESTED: fade-mix) */
-.schedule-content-panel {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 0.4s ease, transform 0.4s ease-out;
+.day-card-headline {
+    font-family: var(--font-heading);
+    font-size: 1.55rem;
+    font-weight: 800;
+    color: var(--color-dark);
+    letter-spacing: -0.5px;
+    margin-top: 24px;
+    margin-bottom: 12px;
+    line-height: 1.25;
+    transition: var(--transition-smooth);
 }
 
-.schedule-content-panel.fade-out {
-    opacity: 0;
-    transform: translateY(12px);
+.tennis-day-card:hover .day-card-headline {
+    color: var(--color-white) !important;
 }
 
-.schedule-day-panel {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 50px;
-    align-items: center;
+.day-card-desc {
+    font-size: 0.95rem;
+    color: var(--color-dark);
+    line-height: 1.5;
+    font-weight: 500;
+    transition: var(--transition-smooth);
 }
 
-@media (max-width: 992px) {
-    .schedule-day-panel {
-        grid-template-columns: 1fr;
-        gap: 35px;
-    }
+.tennis-day-card:hover .day-card-desc {
+    color: rgba(255, 255, 255, 0.85) !important;
 }
 
-.panel-image {
-    border-radius: var(--radius-large);
-    height: 360px;
+/* Immersive Card Bottom (Photo & Smooth Glider Overlay) */
+.day-card-bottom {
+    height: 320px;
+    border-radius: 24px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    position: relative;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.03);
 }
 
-.panel-image img {
+.day-card-bottom img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: var(--transition-smooth);
 }
 
-.panel-info {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.tennis-day-card:hover .day-card-bottom img {
+    transform: scale(1.05);
 }
 
-.day-title-badge {
-    font-size: 0.8rem;
+/* Tennis Trigger button */
+.program-trigger-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: var(--color-white);
+    color: var(--color-dark);
     font-weight: 700;
-    text-transform: uppercase;
-    color: var(--color-accent);
-    letter-spacing: 1.5px;
+    font-size: 0.85rem;
+    padding: 10px 18px;
+    border-radius: var(--radius-pill);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    z-index: 5;
 }
 
-.day-headline {
-    font-family: var(--font-heading);
-    font-size: 2rem;
-    font-weight: 800;
+.program-trigger-btn i {
+    font-size: 0.95rem;
     color: var(--color-primary);
-    line-height: 1.2;
+    transition: var(--transition-fast);
 }
 
-.day-text {
-    font-size: 1rem;
-    color: var(--color-gray);
-    line-height: 1.6;
+.program-trigger-btn:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    transform: translateY(-2px);
 }
 
-.day-timeline-list {
+.program-trigger-btn:hover i {
+    color: var(--color-white);
+}
+
+/* Gliding Timeline Overlay (Slide-Up) */
+.timeline-slide-overlay {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-white);
+    padding: 24px;
     display: flex;
     flex-direction: column;
     gap: 16px;
-    margin-top: 10px;
+    transition: bottom 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 10;
+    box-shadow: 0 -8px 24px rgba(0,0,0,0.04);
 }
 
-.timeline-item {
+.tennis-day-card:hover .timeline-slide-overlay,
+.tennis-day-card.active-overlay .timeline-slide-overlay {
+    bottom: 0;
+}
+
+.overlay-header {
     display: flex;
-    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 10px;
 }
 
-.timeline-item-time {
+.overlay-header h4 {
+    font-family: var(--font-heading);
+    font-size: 1rem;
     font-weight: 700;
     color: var(--color-primary);
-    font-size: 0.95rem;
-    flex-shrink: 0;
-    width: 100px;
 }
 
-.timeline-item-text {
-    font-size: 0.95rem;
+.overlay-close-btn {
+    font-size: 1.5rem;
+    font-weight: 300;
     color: var(--color-gray);
-    line-height: 1.4;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.overlay-close-btn:hover {
+    color: var(--color-primary);
+}
+
+.day-card-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+.day-card-timeline::-webkit-scrollbar {
+    width: 3px;
+}
+
+.day-card-timeline::-webkit-scrollbar-thumb {
+    background-color: var(--color-border);
+    border-radius: 3px;
+}
+
+.timeline-slot {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.slot-time {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.slot-text {
+    font-size: 0.85rem;
+    color: var(--color-dark) !important;
+    font-weight: 500;
+    line-height: 1.35;
+}
+
+@media (max-width: 992px) {
+    .schedule-tennis-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+}
+
+@media (max-width: 576px) {
+    .schedule-tennis-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .tennis-day-card {
+        padding: 30px 24px 20px;
+        border-radius: 24px;
+    }
+    
+    .day-card-bottom {
+        height: 280px;
+    }
 }
 
 /* ==========================================================================
@@ -1355,6 +1421,11 @@ ul, ol {
     justify-content: center;
     font-weight: 800;
     font-size: 1.1rem;
+}
+
+.box-icon i {
+    font-size: 1.1rem;
+    line-height: 1;
 }
 
 .included .box-icon {
@@ -1496,8 +1567,16 @@ ul, ol {
     border: 1px solid rgba(212, 175, 55, 0.25);
     padding: 10px 20px;
     border-radius: var(--radius-medium);
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    gap: 10px;
     line-height: 1.4;
+}
+
+.adult-chip i {
+    font-size: 1.2rem;
+    color: var(--color-accent);
 }
 
 .adults-image {
@@ -1505,7 +1584,6 @@ ul, ol {
     border-radius: var(--radius-large);
     height: 400px;
     overflow: hidden;
-    border: 1px solid rgba(212, 175, 55, 0.3);
 }
 
 .adults-image img {
@@ -1652,8 +1730,7 @@ ul, ol {
     color: var(--color-primary);
     font-weight: 700;
     font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     padding: 8px 20px;
     border-radius: var(--radius-pill);
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
@@ -1682,86 +1759,63 @@ ul, ol {
 }
 
 /* ==========================================================================
-   INTERACTIVE GALLERY GRID (ATMOSPHERE OF CHINA)
+   INTERACTIVE GALLERY GRID (ATMOSPHERE OF CHINA - PERFECT SOLID RECTANGLE)
    ========================================================================== */
+
+.gallery-fluid-container {
+    max-width: 1200px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+}
 
 .gallery-grid-live {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 220px);
-    gap: 16px;
+    gap: 20px;
     margin-top: 40px;
 }
 
 .gallery-live-item {
-    border-radius: var(--radius-medium);
+    border-radius: var(--radius-large);
+    height: 280px; /* Equal height for all items, forming a perfect solid rectangle */
     overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.02);
+    position: relative;
+    box-shadow: var(--shadow-card);
+    transition: var(--transition-smooth);
 }
 
 .gallery-live-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: var(--transition-smooth);
 }
 
-.gallery-live-item:nth-child(1) {
-    grid-column: 1 / 3;
-    grid-row: 1 / 2;
-}
-
-.gallery-live-item:nth-child(2) {
-    grid-column: 3 / 4;
-    grid-row: 1 / 3;
-}
-
-.gallery-live-item:nth-child(3) {
-    grid-column: 4 / 5;
-    grid-row: 1 / 2;
-}
-
-.gallery-live-item:nth-child(4) {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-}
-
-.gallery-live-item:nth-child(5) {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-}
-
-.gallery-live-item:nth-child(6) {
-    grid-column: 4 / 5;
-    grid-row: 2 / 3;
+.gallery-live-item:hover img {
+    transform: scale(1.06);
+    filter: brightness(1.04);
 }
 
 @media (max-width: 992px) {
     .gallery-grid-live {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 180px);
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
     }
-    
-    .gallery-live-item:nth-child(1) { grid-column: 1 / 3; grid-row: 1 / 2; }
-    .gallery-live-item:nth-child(2) { grid-column: 3 / 4; grid-row: 1 / 3; }
-    .gallery-live-item:nth-child(3) { grid-column: 1 / 2; grid-row: 2 / 3; }
-    .gallery-live-item:nth-child(4) { grid-column: 2 / 3; grid-row: 2 / 3; }
-    .gallery-live-item:nth-child(5) { grid-column: 1 / 3; grid-row: 3 / 4; }
-    .gallery-live-item:nth-child(6) { grid-column: 3 / 4; grid-row: 3 / 4; }
+    .gallery-live-item {
+        height: 240px;
+    }
 }
 
 @media (max-width: 576px) {
     .gallery-grid-live {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(4, 150px);
+        grid-template-columns: 1fr;
+        gap: 12px;
     }
-    
-    .gallery-live-item:nth-child(1) { grid-column: 1 / 3; grid-row: 1 / 2; }
-    .gallery-live-item:nth-child(2) { grid-column: 1 / 2; grid-row: 2 / 4; }
-    .gallery-live-item:nth-child(3) { grid-column: 2 / 3; grid-row: 2 / 3; }
-    .gallery-live-item:nth-child(4) { grid-column: 2 / 3; grid-row: 3 / 4; }
-    .gallery-live-item:nth-child(5) { grid-column: 1 / 3; grid-row: 4 / 5; }
-    .gallery-live-item:nth-child(6) { display: none; } /* Hide extra to fit beautifully */
-    .gallery-live-item:nth-child(7) { display: none; }
+    .gallery-live-item {
+        height: 210px;
+    }
 }
 
 /* ==========================================================================
@@ -1881,7 +1935,8 @@ ul, ol {
 
 .apply-feat-item p {
     font-size: 0.9rem;
-    color: #BECAC0;
+    font-weight: 500;
+    color: #F4F7F4;
     line-height: 1.5;
 }
 
@@ -1910,7 +1965,6 @@ ul, ol {
     font-size: 0.85rem;
     font-weight: 700;
     color: var(--color-primary);
-    text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
@@ -2081,9 +2135,7 @@ ul, ol {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(18, 21, 18, 0.6);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(18, 21, 18, 0.75);
     z-index: 10000;
     display: flex;
     align-items: center;
@@ -2181,4 +2233,279 @@ ul, ol {
         transition: none !important;
     }
 }
+
+/* ==========================================================================
+   PHOSPHOR ICONS INTEGRATION (UI/UX PRO MAX DESIGN SYSTEM)
+   ========================================================================== */
+.chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.chip i {
+    font-size: 1.1em;
+    color: var(--color-primary);
+}
+
+.card-icon {
+    color: var(--color-primary);
+}
+
+.card-icon i {
+    font-size: 2.2rem;
+    line-height: 1;
+}
+
+.adv-emoji {
+    color: var(--color-primary);
+}
+
+.adv-emoji i {
+    font-size: 2.2rem;
+    line-height: 1;
+}
+
+.check-icon i {
+    color: var(--color-primary);
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.apply-feat-icon i {
+    color: var(--color-accent);
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.modal-icon i {
+    color: var(--color-primary);
+    font-size: 3.5rem;
+    line-height: 1;
+}
+
+.icon-checkmark i {
+    vertical-align: middle;
+    display: inline-block;
+    position: relative;
+    top: -1px;
+}
+
+.bullet i {
+    vertical-align: middle;
+    display: inline-block;
+    font-size: 0.9rem;
+    line-height: 1;
+}
+
+/* ==========================================================================
+   HIGH LEGIBILITY HIGH CONTRAST UTILITIES
+   ========================================================================== */
+.section-text,
+.faq-answer,
+.checkpoint p,
+.price-box p,
+.box-list li,
+.target-list li,
+.apply-feat-item p,
+.modal-desc,
+.day-card-desc,
+.slot-text,
+.step-desc,
+.footer-copy,
+.footer-sub-copy {
+    color: var(--color-dark) !important;
+    font-weight: 500;
+}
+
+/* Light text overrides inside dark sections to prevent black-on-black text contrast issues */
+.bg-dark .section-text,
+.bg-dark .apply-feat-item p,
+.bg-dark .apply-feat-item h5,
+.bg-dark .box-list li,
+.bg-dark .checkpoint p,
+.bg-dark .checkpoint-body p,
+.bg-dark .checkpoint-body h4,
+.bg-dark h2.section-title,
+.apply-section .section-text,
+.apply-section .apply-feat-item p,
+.apply-section .apply-feat-item h5,
+.adults-section .section-text,
+.hero-section .hero-subtitle,
+.hero-section .hero-advantages li,
+.hero-section .hero-advantages li span {
+    color: #F4F7F4 !important;
+}
+
+/* ==========================================================================
+   RETRO OS & PERFORMANCE ENGINE OPTIMIZATIONS (WINDOWS XP / WINDOWS 7)
+   ========================================================================== */
+
+/* Force hardware GPU acceleration on older graphic architectures to prevent layout lags */
+.tennis-day-card,
+.day-card-bottom img,
+.gallery-live-item img,
+.btn,
+.timeline-slide-overlay,
+.faq-item,
+.hero-section,
+.about-section {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    perspective: 1000;
+}
+
+/* Ensure modern Google Fonts display with absolute crispness on GDI and ClearType renderers of Windows XP/7 */
+body, h1, h2, h3, h4, h5, h6, p, li, span, button {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Crisp pixel rendering for optimized WebP images on older low-res CRT/LCD monitors */
+img {
+    image-rendering: -webkit-optimize-contrast;
+}
+
+/* Optimize browser painting layer compilation */
+.tennis-day-card,
+.day-card-bottom img,
+.gallery-live-item img {
+    will-change: transform, opacity;
+}
+
+/* ==========================================================================
+   PREMIUM INTERACTIVE MICRO-ANIMATIONS (WOW EFFECTS)
+   ========================================================================== */
+
+/* 1. Pill Badge micro-float inside card hovers */
+.tennis-day-card .pill {
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.tennis-day-card:hover .pill {
+    transform: translateY(-3px) scale(1.03);
+}
+
+/* 2. Slide-right effect for standard button arrow icons */
+.btn i, .btn svg {
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    margin-left: 8px;
+}
+.btn:hover i, .btn:hover svg {
+    transform: translateX(5px);
+}
+
+/* 3. Slide-up-right effect for program trigger buttons */
+.program-trigger-btn i {
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.program-trigger-btn:hover i {
+    transform: translate(3px, -3px) scale(1.1);
+}
+
+/* 4. Pulsing sylvan ring effect on active menu toggle */
+#menu-toggle.active {
+    box-shadow: 0 0 0 4px rgba(71, 128, 60, 0.25);
+}
+
+/* ==========================================================================
+   LOW-SPEC ADAPTIVE OPTIMIZATIONS (1GB RAM & WEAK CPU FALLBACKS)
+   ========================================================================== */
+
+/* Disable video display, expensive blurs, and shadows to conserve CPU/RAM */
+.low-spec {
+    --shadow-card: none !important;
+    --shadow-clay: none !important;
+    --shadow-button: none !important;
+}
+
+/* Force flat, high-performance borders on all elements to eliminate repaint layers */
+.low-spec .tennis-day-card,
+.low-spec .program-card,
+.low-spec .advantage-item,
+.low-spec .price-box,
+.low-spec .target-box,
+.low-spec .organizer-left,
+.low-spec .safety-image,
+.low-spec .adults-image,
+.low-spec .btn,
+.low-spec .main-header,
+.low-spec .top-card-icon,
+.low-spec .faq-item {
+    box-shadow: none !important;
+    border: 1px solid var(--color-border) !important;
+    transform: none !important;
+    transition: none !important;
+}
+
+/* Disable parallax/sliding animations and transitions to prevent GPU/CPU thrashing */
+.low-spec .fade-in-up {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    transition-delay: 0s !important;
+}
+
+.low-spec .hero-section video {
+    display: none !important;
+}
+
+/* Replace expensive looping background video with lightweight flat sylvan gradient background */
+.low-spec .hero-section {
+    background: linear-gradient(135deg, #1b351e 0%, #2f5434 100%) !important;
+}
+
+/* Disable all dynamic hover translations and transforms */
+.low-spec .tennis-day-card:hover,
+.low-spec .program-card:hover,
+.low-spec .advantage-item:hover,
+.low-spec .price-box:hover,
+.low-spec .target-box:hover,
+.low-spec .organizer-left:hover {
+    transform: none !important;
+    box-shadow: none !important;
+    background-color: var(--color-light) !important;
+    border-color: var(--color-border) !important;
+}
+
+/* Retain standard colors on card hovers under flat low-spec mode */
+.low-spec .tennis-day-card:hover .day-card-headline {
+    color: var(--color-dark) !important;
+}
+.low-spec .tennis-day-card:hover .day-card-desc {
+    color: var(--color-gray) !important;
+}
+.low-spec .tennis-day-card:hover .pill-green {
+    background-color: rgba(71, 128, 60, 0.12) !important;
+    color: var(--color-primary) !important;
+}
+.low-spec .tennis-day-card:hover .pill-outline {
+    border-color: var(--color-border) !important;
+    color: var(--color-primary) !important;
+}
+.low-spec .tennis-day-card:hover .top-card-icon {
+    background-color: var(--color-white) !important;
+    border-color: var(--color-border) !important;
+    color: var(--color-primary) !important;
+}
+
+/* Disable hover translations on sub-components */
+.low-spec .tennis-day-card:hover .pill,
+.low-spec .btn:hover i, 
+.low-spec .btn:hover svg,
+.low-spec .program-trigger-btn:hover i {
+    transform: none !important;
+}
+
+.low-spec .gallery-live-item:hover img {
+    transform: none !important;
+    filter: none !important;
+}
+
+
+
+
 

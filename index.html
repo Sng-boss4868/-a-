@@ -18,6 +18,9 @@
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Phosphor Icons Web Library (UI/UX Pro Max Guideline) -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 <body>
 
@@ -59,7 +62,7 @@
             <!-- Видео-подложка, если есть видео -->
             <div class="hero-video-container">
                 <video autoplay muted loop playsinline class="hero-video" id="hero-video">
-                    <source src="Telegram Desktop/IMG_1134.MOV" type="video/mp4">
+                    <source src="Telegram Desktop/IMG_1134.webm" type="video/webm">
                     <!-- Заглушка, если видео не поддерживается -->
                 </video>
                 <div class="hero-overlay"></div>
@@ -70,44 +73,35 @@
                     <span class="badge hero-badge">Летний лагерь в Китае 2026</span>
                     <h1 class="hero-title">Летний языковой лагерь в Циндао</h1>
                     <p class="hero-subtitle">
-                        14 дней полного погружения в Китай: язык, культура, море, университетская среда и живое общение
+                        Полное погружение в языковую и культурную среду Китая через практику, общение и живой опыт
                     </p>
                     
                     <ul class="hero-advantages">
                         <li>
-                            <span class="icon-checkmark">✓</span>
-                            <span>ежедневная практика китайского</span>
+                            <span class="icon-checkmark"><i class="ph ph-check-circle"></i></span>
+                            <span><strong>14 дней полного погружения:</strong> море, учеба и город в одном месте</span>
                         </li>
                         <li>
-                            <span class="icon-checkmark">✓</span>
-                            <span>сопровождение и безопасность</span>
+                            <span class="icon-checkmark"><i class="ph ph-check-circle"></i></span>
+                            <span><strong>Любой уровень языка (0+):</strong> идеальный старт для новичков и продолжающих</span>
                         </li>
                         <li>
-                            <span class="icon-checkmark">✓</span>
-                            <span>культурная программа и активности</span>
+                            <span class="icon-checkmark"><i class="ph ph-check-circle"></i></span>
+                            <span><strong>Ежедневная языковая практика:</strong> реальное общение в городе и кампусе</span>
+                        </li>
+                        <li>
+                            <span class="icon-checkmark"><i class="ph ph-check-circle"></i></span>
+                            <span><strong>Безопасность и забота:</strong> круглосуточное сопровождение кураторов 24/7</span>
+                        </li>
+                        <li>
+                            <span class="icon-checkmark"><i class="ph ph-check-circle"></i></span>
+                            <span><strong>Насыщенная программа:</strong> древняя культура, экскурсии, квесты и пляжи</span>
                         </li>
                     </ul>
                     
                     <div class="hero-actions-row">
                         <a href="#apply" class="btn btn-primary btn-large btn-pill">Оставить заявку</a>
                         <a href="#about" class="btn btn-secondary btn-large btn-pill">Узнать больше</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="hero-bottom-bar">
-                <div class="container hero-bottom-container">
-                    <div class="bottom-stat">
-                        <span class="stat-num">14</span>
-                        <span class="stat-txt">дней погружения</span>
-                    </div>
-                    <div class="bottom-stat">
-                        <span class="stat-num">3 в 1</span>
-                        <span class="stat-txt">море, учеба, город</span>
-                    </div>
-                    <div class="bottom-stat">
-                        <span class="stat-num">0<span class="plus-sign">+</span></span>
-                        <span class="stat-txt">любой уровень языка</span>
                     </div>
                 </div>
             </div>
@@ -118,35 +112,31 @@
             <div class="container">
                 <div class="section-grid">
                     <div class="section-left">
-                        <span class="section-tag">О проекте</span>
-                        <h2 class="section-title">Не просто поездка в Китай</h2>
-                        <p class="section-lead">
-                            Это 14 дней полного погружения в языковую и культурную среду Китая.
-                        </p>
+                        <h2 class="section-title">14 дней полного погружения в живую культуру и язык Китая</h2>
                         <p class="section-text">
-                            Участники не только изучают китайский язык, но и ежедневно используют его в реальных ситуациях: в городе, на экскурсиях, в общении и во время активностей.
+                            Наш летний лагерь в Циндао создан для тех, кто хочет преодолеть языковой барьер и почувствовать настоящий Китай. Участники ежедневно используют китайский язык в реальных жизненных ситуациях: во время интерактивных квестов, городских экскурсий, поездок к морю и живого общения с носителями языка.
                         </p>
                         
                         <div class="program-chips">
-                            <span class="chip">🎓 Обучение</span>
-                            <span class="chip">🗣️ Практика языка</span>
-                            <span class="chip">🎋 Знакомство с культурой</span>
-                            <span class="chip">🗺️ Квесты и челленджи</span>
-                            <span class="chip">👥 Разговорные клубы</span>
-                            <span class="chip">🌊 Атмосфера Китая</span>
+                            <span class="chip"><i class="ph ph-graduation-cap"></i> Обучение</span>
+                            <span class="chip"><i class="ph ph-chats"></i> Практика языка</span>
+                            <span class="chip"><i class="ph ph-tree"></i> Знакомство с культурой</span>
+                            <span class="chip"><i class="ph ph-map-trifold"></i> Квесты и челленджи</span>
+                            <span class="chip"><i class="ph ph-users"></i> Разговорные клубы</span>
+                            <span class="chip"><i class="ph ph-waves"></i> Атмосфера Китая</span>
                         </div>
                     </div>
                     
                     <div class="section-right">
                         <div class="image-grid-mosaic">
                             <div class="mosaic-item item-1 hover-zoom-effect">
-                                <img src="Telegram Desktop/photo_1_2026-05-28_18-41-00.jpg" alt="Атмосфера лагеря в Китае" loading="lazy">
+                                <img src="Telegram Desktop/photo_1_2026-05-28_18-41-00.webp" alt="Атмосфера лагеря в Китае" loading="lazy">
                             </div>
                             <div class="mosaic-item item-2 hover-zoom-effect">
-                                <img src="Telegram Desktop/photo_2_2026-05-28_18-41-00.jpg" alt="Студенты в Циндао" loading="lazy">
+                                <img src="Telegram Desktop/photo_2_2026-05-28_18-41-00.webp" alt="Студенты в Циндао" loading="lazy">
                             </div>
                             <div class="mosaic-item item-3 hover-zoom-effect">
-                                <img src="Telegram Desktop/photo_3_2026-05-28_18-41-00.jpg" alt="Живые фото Китая" loading="lazy">
+                                <img src="Telegram Desktop/photo_3_2026-05-28_18-41-00.webp" alt="Живые фото Китая" loading="lazy">
                             </div>
                         </div>
                     </div>
@@ -158,38 +148,31 @@
         <section class="qingdao-section section-padding bg-light" id="qingdao">
             <div class="container">
                 <div class="section-header text-center">
-                    <span class="section-tag">Локация</span>
-                    <h2 class="section-title">Один из самых комфортных городов Китая</h2>
-                    <p class="section-subtitle max-w-600">
-                        Циндао — современный морской город, сочетающий атмосферу большого Китая, безопасность, природу и молодёжную среду.
-                    </p>
+                    <h2 class="section-title">Циндао — один из самых комфортных и красивых морских городов Китая</h2>
                 </div>
                 
                 <div class="qingdao-content">
                     <div class="qingdao-text-block">
                         <p class="section-text">
-                            Участники увидят Китай не как туристы, а как часть повседневной жизни: университеты, улицы, парки, вечерние активности, море и живое общение.
+                            Циндао сочетает в себе динамику современного Китая, безопасность, потрясающую природу и активную молодёжную среду. Здесь участники увидят реальную повседневную жизнь: от красивейших кампусов и набережных до уютных парков, моря и живого общения.
                         </p>
                     </div>
                     
-                    <div class="qingdao-gallery-slider">
-                        <div class="gallery-wrapper" id="gallery-wrapper">
-                            <div class="gallery-slide hover-zoom-effect">
-                                <img src="Telegram Desktop/photo_4_2026-05-28_18-41-00.jpg" alt="Море и пляжи Циндао" loading="lazy">
-                                <span class="gallery-caption">Морское побережье Циндао</span>
-                            </div>
-                            <div class="gallery-slide hover-zoom-effect">
-                                <img src="Telegram Desktop/photo_5_2026-05-28_18-41-00.jpg" alt="Вечерний город" loading="lazy">
-                                <span class="gallery-caption">Современный вечерний Циндао</span>
-                            </div>
-                            <div class="gallery-slide hover-zoom-effect">
-                                <img src="Telegram Desktop/photo_6_2026-05-28_18-41-00.jpg" alt="Кампус университета" loading="lazy">
-                                <span class="gallery-caption">Кампус и университетская среда</span>
-                            </div>
+                    <!-- Премиальный асимметричный фотоколлаж вместо слайдера со стрелками и веревками -->
+                    <div class="qingdao-editorial-grid">
+                        <div class="editorial-item item-large hover-zoom-effect">
+                            <img src="Telegram Desktop/photo_4_2026-05-28_18-41-00.webp" alt="Морское побережье Циндао" loading="lazy">
+                            <span class="editorial-caption">Морское побережье Циндао</span>
                         </div>
-                        <div class="slider-nav">
-                            <button class="btn-arrow btn-prev" id="gallery-prev" aria-label="Назад">&#8592;</button>
-                            <button class="btn-arrow btn-next" id="gallery-next" aria-label="Вперед">&#8594;</button>
+                        <div class="editorial-sub-grid">
+                            <div class="editorial-item item-small hover-zoom-effect">
+                                <img src="Telegram Desktop/photo_5_2026-05-28_18-41-00.webp" alt="Современный вечерний Циндао" loading="lazy">
+                                <span class="editorial-caption">Современный вечерний Циндао</span>
+                            </div>
+                            <div class="editorial-item item-small hover-zoom-effect">
+                                <img src="Telegram Desktop/photo_6_2026-05-28_18-41-00.webp" alt="Кампус и университетская среда" loading="lazy">
+                                <span class="editorial-caption">Кампус и университетская среда</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -207,12 +190,12 @@
                     </p>
                 </div>
                 
-                <div class="grid-4-cols">
-                    <!-- Блок 1 -->
-                    <div class="program-card hover-zoom-effect">
-                        <div class="card-icon">🗣️</div>
+                <div class="grid-4-cols program-cards-container">
+                    <!-- Блок 1: Языковая практика -->
+                    <div class="program-card program-card-outline-1 hover-zoom-effect">
+                        <div class="card-icon"><i class="ph ph-chats-teardrop"></i></div>
                         <h3 class="card-title">Языковая практика</h3>
-                        <ul class="card-list">
+                        <ul class="card-list tight-line-90">
                             <li>разговорные клубы с китайскими студентами</li>
                             <li>языковые челленджи</li>
                             <li>практика общения в городе</li>
@@ -220,9 +203,9 @@
                         </ul>
                     </div>
                     
-                    <!-- Блок 2 -->
-                    <div class="program-card hover-zoom-effect">
-                        <div class="card-icon">🎭</div>
+                    <!-- Блок 2: Культура Китая -->
+                    <div class="program-card program-card-solid-1 hover-zoom-effect">
+                        <div class="card-icon"><i class="ph ph-palette"></i></div>
                         <h3 class="card-title">Культура Китая</h3>
                         <ul class="card-list">
                             <li>мастер-классы по китайской опере</li>
@@ -232,9 +215,9 @@
                         </ul>
                     </div>
                     
-                    <!-- Блок 3 -->
-                    <div class="program-card hover-zoom-effect">
-                        <div class="card-icon">🎋</div>
+                    <!-- Блок 3: Атмосфера лагеря -->
+                    <div class="program-card program-card-outline-2 hover-zoom-effect">
+                        <div class="card-icon"><i class="ph ph-campfire"></i></div>
                         <h3 class="card-title">Атмосфера лагеря</h3>
                         <ul class="card-list">
                             <li>вечерние прогулки и общение</li>
@@ -244,9 +227,9 @@
                         </ul>
                     </div>
                     
-                    <!-- Блок 4 -->
-                    <div class="program-card hover-zoom-effect">
-                        <div class="card-icon">🌊</div>
+                    <!-- Блок 4: Город и поездки -->
+                    <div class="program-card program-card-solid-2 hover-zoom-effect">
+                        <div class="card-icon"><i class="ph ph-waves"></i></div>
                         <h3 class="card-title">Город и поездки</h3>
                         <ul class="card-list">
                             <li>масштабный квест по Циндао</li>
@@ -267,52 +250,59 @@
                     <h2 class="section-title text-white">Почему выбирают наш лагерь</h2>
                 </div>
                 
-                <div class="grid-3-cols">
-                    <div class="advantage-item hover-zoom-effect">
-                        <div class="adv-emoji">🌏</div>
-                        <div>
+                <!-- Асимметричная сетка Bento Grid вместо однотипных прямоугольных плашек -->
+                <div class="advantages-bento-grid">
+                    <!-- Полное погружение (Span 2) -->
+                    <div class="advantage-item adv-span-2 hover-zoom-effect">
+                        <div class="adv-icon"><i class="ph ph-globe"></i></div>
+                        <div class="adv-text-content">
                             <h3 class="adv-title">Полное погружение</h3>
-                            <p class="adv-desc">Вы не просто учитесь, а живете в китайской языковой среде 24/7, постоянно общаясь с носителями.</p>
+                            <p class="adv-desc">Вы не просто учитесь, а живете в китайской языковой среде 24/7, постоянно общаясь с носителями языка в кампусе, на улицах и во время экскурсий.</p>
                         </div>
                     </div>
                     
-                    <div class="advantage-item hover-zoom-effect">
-                        <div class="adv-emoji">🧠</div>
-                        <div>
+                    <!-- Практика вместо зубрёжки (Span 1) -->
+                    <div class="advantage-item adv-span-1 hover-zoom-effect">
+                        <div class="adv-icon"><i class="ph ph-brain"></i></div>
+                        <div class="adv-text-content">
                             <h3 class="adv-title">Практика вместо зубрёжки</h3>
-                            <p class="adv-desc">Никаких скучных лекций. Обучение построено через живое использование языка в городе и квестах.</p>
+                            <p class="adv-desc">Никаких скучных лекций. Обучение построено через живое использование языка в городе, магазинах и игровых квестах.</p>
                         </div>
                     </div>
                     
-                    <div class="advantage-item hover-zoom-effect">
-                        <div class="adv-emoji">🎓</div>
-                        <div>
+                    <!-- Университетская среда (Span 1) -->
+                    <div class="advantage-item adv-span-1 hover-zoom-effect">
+                        <div class="adv-icon"><i class="ph ph-graduation-cap"></i></div>
+                        <div class="adv-text-content">
                             <h3 class="adv-title">Университетская среда</h3>
-                            <p class="adv-desc">Проживание и обучение на базе кампуса университета, общение со студентами и погружение в молодежный вайб.</p>
+                            <p class="adv-desc">Проживание и обучение на базе кампуса государственного университета, общение со студентами и академический вайб.</p>
                         </div>
                     </div>
                     
-                    <div class="advantage-item hover-zoom-effect">
-                        <div class="adv-emoji">🌊</div>
-                        <div>
+                    <!-- Море и отдых (Span 2) -->
+                    <div class="advantage-item adv-span-2 hover-zoom-effect">
+                        <div class="adv-icon"><i class="ph ph-waves"></i></div>
+                        <div class="adv-text-content">
                             <h3 class="adv-title">Море и Циндао</h3>
-                            <p class="adv-desc">Сочетание интенсивного развития с курортным отдыхом на берегу Желтого моря в одном из лучших городов Китая.</p>
+                            <p class="adv-desc">Прекрасное сочетание интенсивного развития с курортным отдыхом на золотистом берегу Желтого моря в одном из самых экологичных и зеленых городов Китая.</p>
                         </div>
                     </div>
                     
-                    <div class="advantage-item hover-zoom-effect">
-                        <div class="adv-emoji">👥</div>
-                        <div>
+                    <!-- Поддержка и кураторство (Span 2) -->
+                    <div class="advantage-item adv-span-2 hover-zoom-effect">
+                        <div class="adv-icon"><i class="ph ph-users"></i></div>
+                        <div class="adv-text-content">
                             <h3 class="adv-title">Поддержка и кураторство</h3>
-                            <p class="adv-desc">Круглосуточное сопровождение опытных наставников, забота о каждом участнике и полная безопасность.</p>
+                            <p class="adv-desc">Круглосуточное сопровождение опытных наставников, забота о здоровье, адаптации и комфорте каждого участника смены.</p>
                         </div>
                     </div>
                     
-                    <div class="advantage-item hover-zoom-effect">
-                        <div class="adv-emoji">🎭</div>
-                        <div>
+                    <!-- Живая культура Китая (Span 1) -->
+                    <div class="advantage-item adv-span-1 hover-zoom-effect">
+                        <div class="adv-icon"><i class="ph ph-palette"></i></div>
+                        <div class="adv-text-content">
                             <h3 class="adv-title">Живая культура Китая</h3>
-                            <p class="adv-desc">Прикоснитесь к древним традициям через практику: от каллиграфии до народных китайских танцев.</p>
+                            <p class="adv-desc">Прикоснитесь к древним традициям через практику: от каллиграфии до народных китайских танцев и чайных церемоний.</p>
                         </div>
                     </div>
                 </div>
@@ -370,27 +360,551 @@
             </div>
         </section>
 
-        <!-- 7 ЭКРАН — РАСПИСАНИЕ ПО ДНЯМ -->
+        <!-- 7 ЭКРАН — РАСПИСАНИЕ ПО ДНЯМ (ПРЕМИАЛЬНЫЙ ТЕННИСНЫЙ СТИЛЬ: ВЕРТИКАЛЬНЫЕ КАРТЫ-КАТАЛОГИ С ПОДВИЖНЫМ OVERLAY-РАСПИСАНИЕМ) -->
         <section class="schedule-section section-padding bg-light" id="schedule">
             <div class="container">
                 <div class="section-header text-center">
                     <span class="section-tag">Календарь</span>
-                    <h2 class="section-title">Интерактивное расписание лагеря</h2>
-                    <p class="section-subtitle max-w-600">Нажмите на любой день, чтобы увидеть подробности. Мы создали идеальный баланс учебы, экскурсий и атмосферы Китая.</p>
+                    <h2 class="section-title">Программа лагеря по дням</h2>
+                    <p class="section-subtitle max-w-600">Наведите на карту дня или кликните на кнопку «Программа», чтобы открыть подробное почасовое расписание.</p>
                 </div>
                 
-                <div class="schedule-tabs-container">
-                    <div class="days-switcher-wrapper">
-                        <button class="arrow-switch prev-days" id="prev-days" aria-label="Предыдущие дни">&#8249;</button>
-                        <div class="days-switcher" id="days-switcher">
-                            <!-- JS генерирует кнопки дней 1-14 -->
+
+                <!-- Сетка вертикальных теннисных карточек (Tennis-Style Grid) -->
+                <div class="schedule-tennis-grid">
+                    
+                    <!-- День 1 -->
+                    <div class="tennis-day-card" id="day-1">
+                        <div class="day-card-top">
+                            <div class="day-card-header">
+                                <span class="pill pill-green">День 1</span>
+                                <span class="pill pill-outline">Адаптация</span>
+                                <span class="top-card-icon"><i class="ph ph-compass"></i></span>
+                            </div>
+                            <h3 class="day-card-headline">Встреча и знакомство</h3>
+                            <p class="day-card-desc">Первый день посвящен встрече наших участников в аэропорту, комфортному трансферу в лагерь и мягкой адаптации к новой культуре.</p>
                         </div>
-                        <button class="arrow-switch next-days" id="next-days" aria-label="Следующие дни">&#8250;</button>
+                        <div class="day-card-bottom hover-zoom-effect">
+                            <img src="Telegram Desktop/photo_1_2026-05-28_18-41-00.webp" alt="Встреча и знакомство" loading="lazy">
+                            <button class="program-trigger-btn">Программа <i class="ph ph-arrow-up-right"></i></button>
+                            
+                            <div class="timeline-slide-overlay">
+                                <div class="overlay-header">
+                                    <h4>Программа дня 1</h4>
+                                    <button class="overlay-close-btn">&times;</button>
+                                </div>
+                                <div class="day-card-timeline">
+                                    <div class="timeline-slot">
+                                        <span class="slot-time">10:00 - 16:00</span>
+                                        <span class="slot-text">Встреча в аэропорту Циндао Литин, комфортабельный трансфер в университетский кампус.</span>
+                                    </div>
+                                    <div class="timeline-slot">
+                                        <span class="slot-time">16:30 - 18:00</span>
+                                        <span class="slot-text">Заселение в комнаты кампуса, разгрузка вещей, знакомство со структурой территории кампуса.</span>
+                                    </div>
+                                    <div class="timeline-slot">
+                                        <span class="slot-time">19:00 - 21:00</span>
+                                        <span class="slot-text">Приветственный ужин с Миленой, первая уютная свечка-знакомство, обсуждение планов на 14 дней.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     
-                    <div class="schedule-content-panel" id="schedule-content-panel">
-                        <!-- Сюда JS плавно вставляет контент выбранного дня (анимация fade-mix) -->
+                    <!-- День 2 -->
+                    <div class="tennis-day-card" id="day-2">
+                        <div class="day-card-top">
+                            <div class="day-card-header">
+                                <span class="pill pill-green">День 2</span>
+                                <span class="pill pill-outline">Город</span>
+                                <span class="top-card-icon"><i class="ph ph-map-trifold"></i></span>
+                            </div>
+                            <h3 class="day-card-headline">Изучение морской столицы</h3>
+                            <p class="day-card-desc">Мы отправляемся знакомиться со знаменитым обликом Циндао — немецкая архитектура, горы, парки и море.</p>
+                        </div>
+                        <div class="day-card-bottom hover-zoom-effect">
+                            <img src="Telegram Desktop/photo_2_2026-05-28_18-41-00.webp" alt="Изучение морской столицы" loading="lazy">
+                            <button class="program-trigger-btn">Программа <i class="ph ph-arrow-up-right"></i></button>
+                            
+                            <div class="timeline-slide-overlay">
+                                <div class="overlay-header">
+                                    <h4>Программа дня 2</h4>
+                                    <button class="overlay-close-btn">&times;</button>
+                                </div>
+                                <div class="day-card-timeline">
+                                    <div class="timeline-slot">
+                                        <span class="slot-time">09:00 - 12:00</span>
+                                        <span class="slot-text">Обзорная экскурсия по историческому немецкому кварталу Циндао и посещение знаменитого пирса Чжаньцяо.</span>
+                                    </div>
+                                    <div class="timeline-slot">
+                                        <span class="slot-time">13:00 - 16:30</span>
+                                        <span class="slot-text">Прогулка по живописному парку Сигнал-Хилл, подъем на вершину для панорамного обзора всего побережья.</span>
+                                    </div>
+                                    <div class="timeline-slot">
+                                        <span class="slot-time">18:00 - 21:00</span>
+                                        <span class="slot-text">Прогулка по вечерней набережной, первый разбор китайских обиходных фраз с Миленой.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    
+                    <!-- День 3 -->
+                    <div class="tennis-day-card" id="day-3">
+                        <div class="day-card-top">
+                            <div class="day-card-header">
+                                <span class="pill pill-green">День 3</span>
+                                <span class="pill pill-outline">Практика</span>
+                                <span class="top-card-icon"><i class="ph ph-chats-teardrop"></i></span>
+                            </div>
+                            <h3 class="day-card-headline">Первый интенсив и квест</h3>
+                            <p class="day-card-desc">Учеба начинается! Переходим от теории сразу к практике в реальной городской среде.</p>
+                        </div>
+                        <div class="day-card-bottom hover-zoom-effect">
+                            <img src="Telegram Desktop/photo_2_2026-05-28_19-31-11.webp" alt="Первый интенсив" loading="lazy">
+                            <button class="program-trigger-btn">Программа <i class="ph ph-arrow-up-right"></i></button>
+                            
+                            <div class="timeline-slide-overlay">
+                                <div class="overlay-header">
+                                    <h4>Программа дня 3</h4>
+                                    <button class="overlay-close-btn">&times;</button>
+                                </div>
+                                <div class="day-card-timeline">
+                                    <div class="timeline-slot">
+                                        <span class="slot-time">09:00 - 12:00</span>
+                                        <span class="slot-text">Первое интерактивное занятие: основы коммуникации, произношение, числительные и покупки.</span>
+                                    </div>
+                                    <div class="timeline-slot">
+                                        <span class="slot-time">13:30 - 16:30</span>
+                                        <span class="slot-text">Языковой квест на местном фермерском рынке: задание купить экзотические фрукты, общаясь на китайском.</span>
+                                    </div>
+                                    <div class="timeline-slot">
+                                        <span class="slot-time">18:00 - 20:30</span>
+                                        <span class="slot-text">Разговорный клуб с китайскими студентами-волонтерами, первые шаги преодоления барьера.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- День 4 -->
+                    <div class="tennis-day-card" id="day-4">
+                        <div class="day-card-top">
+                            <div class="day-card-header">
+                                <span class="pill pill-green">День 4</span>
+                                <span class="pill pill-outline">Традиции</span>
+                                <span class="top-card-icon"><i class="ph ph-palette"></i></span>
+                            </div>
+                            <h3 class="day-card-headline">Искусство каллиграфии</h3>
+                            <p class="day-card-desc">День эстетического погружения в древние китайские традиции, каллиграфию и чайное искусство.</p>
+                        </div>
+                        <div class="day-card-bottom hover-zoom-effect">
+                            <img src="Telegram Desktop/photo_4_2026-05-28_18-41-00.webp" alt="Искусство каллиграфии" loading="lazy">
+                            <button class="program-trigger-btn">Программа <i class="ph ph-arrow-up-right"></i></button>
+                            
+                            <div class="timeline-slide-overlay">
+                                <div class="overlay-header">
+                                    <h4>Программа дня 4</h4>
+                                    <button class="overlay-close-btn">&times;</button>
+                                </div>
+                                <div class="day-card-timeline">
+                                    <div class="timeline-slot">
+                                        <span class="slot-time">09:00 - 12:00</span>
+                                        <span class="slot-text">Мастер-класс по китайской традиционной каллиграфии от приглашенного университетского каллиграфа.</span>
+                                    </div>
+                                    <div class="timeline-slot">
+                                        <span class="slot-time">13:30 - 17:00</span>
+                                        <span class="slot-text">Прогулка по колоритным старым кварталам города Даюань, традиционная чайная церемония в чайном домике.</span>
+                                    </div>
+                                    <div class="timeline-slot">
+                                        <span class="slot-time">19:00 - 21:00</span>
+                                        <span class="slot-text">Ламповый разбор дня у свечки: делимся эмоциями от соприкосновения с древним искусством.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- День 5 -->
+                    <div class="tennis-day-card" id="day-5">
+                        <div class="day-card-top">
+                            <div class="day-card-header">
+                                <span class="pill pill-green">День 5</span>
+                                <span class="pill pill-outline">Челлендж</span>
+                                <span class="top-card-icon"><i class="ph ph-shopping-bag"></i></span>
+                            </div>
+                            <h3 class="day-card-headline">Языковое выживание</h3>
+                            <p class="day-card-desc">Продолжаем повышать сложность. Практикуем лексику продуктов, рецептов и цен в гигантском супермаркете.</p>
+                        </div>
+                        <div class="day-card-bottom hover-zoom-effect">
+                            <img src="Telegram Desktop/photo_5_2026-05-28_18-41-00.webp" alt="Языковое выживание" loading="lazy">
+                            <button class="program-trigger-btn">Программа <i class="ph ph-arrow-up-right"></i></button>
+                            
+                            <div class="timeline-slide-overlay">
+                                <div class="overlay-header">
+                                    <h4>Программа дня 5</h4>
+                                    <button class="overlay-close-btn">&times;</button>
+                                </div>
+                                <div class="day-card-timeline">
+                                    <div class="timeline-slot">
+                                        <span class="slot-time">09:00 - 12:00</span>
+                                        <span class="slot-text">Интенсив китайского языка: еда, рестораны, вкусы, вежливые просьбы в общественных местах.</span>
+                                    </div>
+                                    <div class="timeline-slot">
+                                        <span class="slot-time">13:30 - 16:30</span>
+                                        <span class="slot-text">Челлендж в торговом центре: найти и купить необычные китайские сладости по списку подсказок от Милены.</span>
+                                    </div>
+                                    <div class="timeline-slot">
+                                        <span class="slot-time">18:00 - 21:00</span>
+                                        <span class="slot-text">Пляжные посиделки у моря: обсуждаем результаты челленджа и провожаем потрясающий закат.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- День 6 -->
+                    <div class="tennis-day-card" id="day-6">
+                        <div class="day-card-top">
+                            <div class="day-card-header">
+                                <span class="pill pill-green">День 6</span>
+                                <span class="pill pill-outline">Танец</span>
+                                <span class="top-card-icon"><i class="ph ph-guitar"></i></span>
+                            </div>
+                            <h3 class="day-card-headline">Культура и танцы</h3>
+                            <p class="day-card-desc">Знакомство с пластикой китайского танца и посещение ультрасовременного городского музея.</p>
+                        </div>
+                        <div class="day-card-bottom hover-zoom-effect">
+                            <img src="Telegram Desktop/photo_6_2026-05-28_18-41-00.webp" alt="Культура и танцы" loading="lazy">
+                            <button class="program-trigger-btn">Программа <i class="ph ph-arrow-up-right"></i></button>
+                            
+                            <div class="timeline-slide-overlay">
+                                <div class="overlay-header">
+                                    <h4>Программа дня 6</h4>
+                                    <button class="overlay-close-btn">&times;</button>
+                                </div>
+                                <div class="day-card-timeline">
+                                    <div class="timeline-slot">
+                                        <span class="slot-time">09:00 - 12:00</span>
+                                        <span class="slot-text">Занятие китайским и эксклюзивный мастер-класс по основам традиционного китайского танца.</span>
+                                    </div>
+                                    <div class="timeline-slot">
+                                        <span class="slot-time">13:30 - 17:00</span>
+                                        <span class="slot-text">Экскурсия в грандиозный Музей Циндао, знакомство с историей Желтого моря и провинции Шаньдун.</span>
+                                    </div>
+                                    <div class="timeline-slot">
+                                        <span class="slot-time">18:30 - 21:00</span>
+                                        <span class="slot-text">Разговорные игры и викторины в кампусе, закрепление лексики.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- День 7 -->
+                    <div class="tennis-day-card" id="day-7">
+                        <div class="day-card-top">
+                            <div class="day-card-header">
+                                <span class="pill pill-green">День 7</span>
+                                <span class="pill pill-outline">Экватор</span>
+                                <span class="top-card-icon"><i class="ph ph-sun"></i></span>
+                            </div>
+                            <h3 class="day-card-headline">Поездка к Лаошань</h3>
+                            <p class="day-card-desc">Середина смены! Отдыхаем от классических уроков и совершаем увлекательную выездную прогулку.</p>
+                        </div>
+                        <div class="day-card-bottom hover-zoom-effect">
+                            <img src="Telegram Desktop/photo_9_2026-05-28_18-41-00.webp" alt="Поездка к Лаошань" loading="lazy">
+                            <button class="program-trigger-btn">Программа <i class="ph ph-arrow-up-right"></i></button>
+                            
+                            <div class="timeline-slide-overlay">
+                                <div class="overlay-header">
+                                    <h4>Программа дня 7</h4>
+                                    <button class="overlay-close-btn">&times;</button>
+                                </div>
+                                <div class="day-card-timeline">
+                                    <div class="timeline-slot">
+                                        <span class="slot-time">10:00 - 15:00</span>
+                                        <span class="slot-text">Свободное время или поездка в колоритный пригородный поселок у подножия священных гор Лаошань.</span>
+                                    </div>
+                                    <div class="timeline-slot">
+                                        <span class="slot-time">15:30 - 18:00</span>
+                                        <span class="slot-text">Пикник на пляже, пляжный волейбол, игры на сплочение всей команды.</span>
+                                    </div>
+                                    <div class="timeline-slot">
+                                        <span class="slot-time">19:00 - 21:00</span>
+                                        <span class="slot-text">Душевная свечка экватора: обсуждаем, как изменилось наше восприятие Китая за неделю.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- День 8 -->
+                    <div class="tennis-day-card" id="day-8">
+                        <div class="day-card-top">
+                            <div class="day-card-header">
+                                <span class="pill pill-green">День 8</span>
+                                <span class="pill pill-outline">Кампус</span>
+                                <span class="top-card-icon"><i class="ph ph-graduation-cap"></i></span>
+                            </div>
+                            <h3 class="day-card-headline">Университетский кампус</h3>
+                            <p class="day-card-desc">Сравниваем студенческую жизнь. Посещаем кампус партнерского государственного университета с экскурсией.</p>
+                        </div>
+                        <div class="day-card-bottom hover-zoom-effect">
+                            <img src="Telegram Desktop/photo_10_2026-05-28_18-41-00.webp" alt="Университетский кампус" loading="lazy">
+                            <button class="program-trigger-btn">Программа <i class="ph ph-arrow-up-right"></i></button>
+                            
+                            <div class="timeline-slide-overlay">
+                                <div class="overlay-header">
+                                    <h4>Программа дня 8</h4>
+                                    <button class="overlay-close-btn">&times;</button>
+                                </div>
+                                <div class="day-card-timeline">
+                                    <div class="timeline-slot">
+                                        <span class="slot-time">09:00 - 12:00</span>
+                                        <span class="slot-text">Занятие китайским языком по теме: Образование, университеты, будущая карьера.</span>
+                                    </div>
+                                    <div class="timeline-slot">
+                                        <span class="slot-time">13:30 - 16:30</span>
+                                        <span class="slot-text">Экскурсия по гигантскому современному кампусу Университета Циндао, общение с иностранными студентами.</span>
+                                    </div>
+                                    <div class="timeline-slot">
+                                        <span class="slot-time">18:00 - 20:30</span>
+                                        <span class="slot-text">Киновечер: смотрим культовое китайское кино с русскими субтитрами, разбираем молодежный сленг.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- День 9 -->
+                    <div class="tennis-day-card" id="day-9">
+                        <div class="day-card-top">
+                            <div class="day-card-header">
+                                <span class="pill pill-green">День 9</span>
+                                <span class="pill pill-outline">Кулинария</span>
+                                <span class="top-card-icon"><i class="ph ph-bowl-food"></i></span>
+                            </div>
+                            <h3 class="day-card-headline">Лепка пельменей цзяоцзы</h3>
+                            <p class="day-card-desc">Кулинарный шедевр дня! Учимся лепить настоящие традиционные китайские пельмени (цзяоцзы).</p>
+                        </div>
+                        <div class="day-card-bottom hover-zoom-effect">
+                            <img src="Telegram Desktop/photo_13_2026-05-28_18-41-00.webp" alt="Лепка пельменей" loading="lazy">
+                            <button class="program-trigger-btn">Программа <i class="ph ph-arrow-up-right"></i></button>
+                            
+                            <div class="timeline-slide-overlay">
+                                <div class="overlay-header">
+                                    <h4>Программа дня 9</h4>
+                                    <button class="overlay-close-btn">&times;</button>
+                                </div>
+                                <div class="day-card-timeline">
+                                    <div class="timeline-slot">
+                                        <span class="slot-time">09:00 - 12:00</span>
+                                        <span class="slot-text">Занятие китайским, изучение кулинарной лексики и названий китайских специй.</span>
+                                    </div>
+                                    <div class="timeline-slot">
+                                        <span class="slot-time">13:30 - 17:00</span>
+                                        <span class="slot-text">Мастер-класс по лепке традиционных пельменей цзяоцзы под руководством шеф-повара и праздничный ужин.</span>
+                                    </div>
+                                    <div class="timeline-slot">
+                                        <span class="slot-time">18:30 - 21:00</span>
+                                        <span class="slot-text">Квест по вечернему Циндао: разгадываем загадки истории города прямо на его старинных улицах.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- День 10 -->
+                    <div class="tennis-day-card" id="day-10">
+                        <div class="day-card-top">
+                            <div class="day-card-header">
+                                <span class="pill pill-green">День 10</span>
+                                <span class="pill pill-outline">Общение</span>
+                                <span class="top-card-icon"><i class="ph ph-activity"></i></span>
+                            </div>
+                            <h3 class="day-card-headline">Общение в парке</h3>
+                            <p class="day-card-desc">Самый живой день лагеря! Отправляемся в городской парк для интерактива с легендарными китайскими бабушками.</p>
+                        </div>
+                        <div class="day-card-bottom hover-zoom-effect">
+                            <img src="Telegram Desktop/photo_14_2026-05-28_18-41-00.webp" alt="Общение в парке" loading="lazy">
+                            <button class="program-trigger-btn">Программа <i class="ph ph-arrow-up-right"></i></button>
+                            
+                            <div class="timeline-slide-overlay">
+                                <div class="overlay-header">
+                                    <h4>Программа дня 10</h4>
+                                    <button class="overlay-close-btn">&times;</button>
+                                </div>
+                                <div class="day-card-timeline">
+                                    <div class="timeline-slot">
+                                        <span class="slot-time">09:00 - 12:00</span>
+                                        <span class="slot-text">Урок китайского языка на открытом воздухе в центральном парке Чжуншань.</span>
+                                    </div>
+                                    <div class="timeline-slot">
+                                        <span class="slot-time">13:00 - 16:30</span>
+                                        <span class="slot-text">Совместные активности с китайскими бабушками и дедушками: учимся танцевать веерами, играть в пинг-понг.</span>
+                                    </div>
+                                    <div class="timeline-slot">
+                                        <span class="slot-time">18:00 - 21:00</span>
+                                        <span class="slot-text">Вечерние прогулки у музыкального фонтана, обсуждение преодоления барьера при живом общении.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- День 11 -->
+                    <div class="tennis-day-card" id="day-11">
+                        <div class="day-card-top">
+                            <div class="day-card-header">
+                                <span class="pill pill-green">День 11</span>
+                                <span class="pill pill-outline">Фестиваль</span>
+                                <span class="top-card-icon"><i class="ph ph-beer-stein"></i></span>
+                            </div>
+                            <h3 class="day-card-headline">Пивной фестиваль Циндао</h3>
+                            <p class="day-card-desc">День грандиозного праздника! Взрослые участники отправляются на знаменитый пивной фестиваль, а младшие — на гастрономический праздник.</p>
+                        </div>
+                        <div class="day-card-bottom hover-zoom-effect">
+                            <img src="Telegram Desktop/photo_12_2026-05-28_18-41-00.webp" alt="Пивной фестиваль" loading="lazy">
+                            <button class="program-trigger-btn">Программа <i class="ph ph-arrow-up-right"></i></button>
+                            
+                            <div class="timeline-slide-overlay">
+                                <div class="overlay-header">
+                                    <h4>Программа дня 11</h4>
+                                    <button class="overlay-close-btn">&times;</button>
+                                </div>
+                                <div class="day-card-timeline">
+                                    <div class="timeline-slot">
+                                        <span class="slot-time">09:00 - 12:00</span>
+                                        <span class="slot-text">Утреннее занятие, разбор разговорных фраз для фестивалей, праздников и заказа еды.</span>
+                                    </div>
+                                    <div class="timeline-slot">
+                                        <span class="slot-time">13:30 - 17:00</span>
+                                        <span class="slot-text">Посещение масштабных площадок Международного пивного фестиваля Циндао: шоу, парады, уличная еда.</span>
+                                    </div>
+                                    <div class="timeline-slot">
+                                        <span class="slot-time">18:00 - 22:00</span>
+                                        <span class="slot-text">Живые концерты, международная тусовка, дегустация блюд и праздничная атмосфера.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- День 12 -->
+                    <div class="tennis-day-card" id="day-12">
+                        <div class="day-card-top">
+                            <div class="day-card-header">
+                                <span class="pill pill-green">День 12</span>
+                                <span class="pill pill-outline">Круиз</span>
+                                <span class="top-card-icon"><i class="ph ph-anchor"></i></span>
+                            </div>
+                            <h3 class="day-card-headline">Морская прогулка на катере</h3>
+                            <p class="day-card-desc">Наслаждаемся Циндао со стороны Желтого моря, совершая круиз, и посещаем современную галерею.</p>
+                        </div>
+                        <div class="day-card-bottom hover-zoom-effect">
+                            <img src="Telegram Desktop/photo_15_2026-05-28_18-41-00.webp" alt="Морская прогулка" loading="lazy">
+                            <button class="program-trigger-btn">Программа <i class="ph ph-arrow-up-right"></i></button>
+                            
+                            <div class="timeline-slide-overlay">
+                                <div class="overlay-header">
+                                    <h4>Программа дня 12</h4>
+                                    <button class="overlay-close-btn">&times;</button>
+                                </div>
+                                <div class="day-card-timeline">
+                                    <div class="timeline-slot">
+                                        <span class="slot-time">09:00 - 12:00</span>
+                                        <span class="slot-text">Финальный интенсив китайского языка: подведение итогов курса, подготовка презентаций проектов.</span>
+                                    </div>
+                                    <div class="timeline-slot">
+                                        <span class="slot-time">13:00 - 15:30</span>
+                                        <span class="slot-text">Морская прогулка на комфортабельном катере по заливу Циндао, потрясающие панорамные виды на город.</span>
+                                    </div>
+                                    <div class="timeline-slot">
+                                        <span class="slot-time">16:00 - 18:30</span>
+                                        <span class="slot-text">Посещение музея современного искусства Циндао, знакомство с новыми именами китайского арта.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- День 13 -->
+                    <div class="tennis-day-card" id="day-13">
+                        <div class="day-card-top">
+                            <div class="day-card-header">
+                                <span class="pill pill-green">День 13</span>
+                                <span class="pill pill-outline">Выпускной</span>
+                                <span class="top-card-icon"><i class="ph ph-fire"></i></span>
+                            </div>
+                            <h3 class="day-card-headline">Финал и прощальный костер</h3>
+                            <p class="day-card-desc">Предпоследний день смены: подводим итоги нашего невероятного языкового и культурного роста.</p>
+                        </div>
+                        <div class="day-card-bottom hover-zoom-effect">
+                            <img src="Telegram Desktop/photo_16_2026-05-28_18-41-00.webp" alt="Финал и прощальный костер" loading="lazy">
+                            <button class="program-trigger-btn">Программа <i class="ph ph-arrow-up-right"></i></button>
+                            
+                            <div class="timeline-slide-overlay">
+                                <div class="overlay-header">
+                                    <h4>Программа дня 13</h4>
+                                    <button class="overlay-close-btn">&times;</button>
+                                </div>
+                                <div class="day-card-timeline">
+                                    <div class="timeline-slot">
+                                        <span class="slot-time">10:00 - 13:00</span>
+                                        <span class="slot-text">Защита языковых мини-проектов, торжественное вручение сертификатов о прохождении курса.</span>
+                                    </div>
+                                    <div class="timeline-slot">
+                                        <span class="slot-time">15:00 - 18:00</span>
+                                        <span class="slot-text">Сборы сувениров, прощальный шоппинг и поиск подарков с поддержкой Милены.</span>
+                                    </div>
+                                    <div class="timeline-slot">
+                                        <span class="slot-time">19:00 - 22:00</span>
+                                        <span class="slot-text">Финальная прощальная свечка на пляже под звездами, запуск китайских фонариков желаний в небо.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- День 14 -->
+                    <div class="tennis-day-card" id="day-14">
+                        <div class="day-card-top">
+                            <div class="day-card-header">
+                                <span class="pill pill-green">День 14</span>
+                                <span class="pill pill-outline">Вылет</span>
+                                <span class="top-card-icon"><i class="ph ph-airplane-takeoff"></i></span>
+                            </div>
+                            <h3 class="day-card-headline">Вылет домой</h3>
+                            <p class="day-card-desc">Наше приключение подходит к завершению. Собираем чемоданы воспоминаний и летим домой.</p>
+                        </div>
+                        <div class="day-card-bottom hover-zoom-effect">
+                            <img src="Telegram Desktop/photo_11_2026-05-28_18-41-00.webp" alt="Вылет домой" loading="lazy">
+                            <button class="program-trigger-btn">Программа <i class="ph ph-arrow-up-right"></i></button>
+                            
+                            <div class="timeline-slide-overlay">
+                                <div class="overlay-header">
+                                    <h4>Программа дня 14</h4>
+                                    <button class="overlay-close-btn">&times;</button>
+                                </div>
+                                <div class="day-card-timeline">
+                                    <div class="timeline-slot">
+                                        <span class="slot-time">09:00 - 12:00</span>
+                                        <span class="slot-text">Сборы вещей, финальный завтрак в кампусе, обмен контактами и теплыми пожеланиями.</span>
+                                    </div>
+                                    <div class="timeline-slot">
+                                        <span class="slot-time">13:00 - 15:30</span>
+                                        <span class="slot-text">Групповой комфортабельный трансфер участников в международный аэропорт Циндао Литин.</span>
+                                    </div>
+                                    <div class="timeline-slot">
+                                        <span class="slot-time">16:00 - 20:00</span>
+                                        <span class="slot-text">Прохождение таможенного контроля, вылет домой с огромным багажом опыта, уверенности и вдохновения.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </section>
@@ -408,12 +922,12 @@
                     <!-- Входит -->
                     <div class="price-box included hover-zoom-effect">
                         <div class="box-header">
-                            <span class="box-icon">✓</span>
+                            <span class="box-icon"><i class="ph ph-check"></i></span>
                             <h3 class="box-title">Входит в стоимость</h3>
                         </div>
                         <ul class="box-list">
-                            <li>Комфортное проживание в кампусе университета</li>
-                            <li>Программа занятий китайским языком</li>
+                            <li>Комфортное проживание в кампусе государственного университета</li>
+                            <li>Программа интерактивных занятий китайским языком</li>
                             <li>Насыщенная культурная программа и мастер-классы</li>
                             <li>Все экскурсии и входные билеты на достопримечательности</li>
                             <li>Участие в разговорных клубах с китайскими студентами</li>
@@ -425,7 +939,7 @@
                     <!-- Не входит -->
                     <div class="price-box excluded hover-zoom-effect">
                         <div class="box-header">
-                            <span class="box-icon">✕</span>
+                            <span class="box-icon"><i class="ph ph-x"></i></span>
                             <h3 class="box-title">Не входит в стоимость</h3>
                         </div>
                         <ul class="box-list">
@@ -440,15 +954,14 @@
         </section>
 
         <!-- СПЕЦИАЛЬНЫЙ БЛОК: БЕЗОПАСНОСТЬ И ПОДДЕРЖКА -->
-        <section class="safety-section section-padding bg-green-soft">
+        <section class="safety-section section-padding bg-light">
             <div class="container">
                 <div class="safety-grid">
                     <div class="safety-image hover-zoom-effect">
-                        <img src="Telegram Desktop/photo_11_2026-05-28_18-41-00.jpg" alt="Безопасность и забота кураторов" loading="lazy">
+                        <img src="Telegram Desktop/photo_11_2026-05-28_18-41-00.webp" alt="Безопасность и забота кураторов" loading="lazy">
                     </div>
                     
                     <div class="safety-content">
-                        <span class="section-tag">Забота</span>
                         <h2 class="section-title">Безопасность и всесторонняя поддержка</h2>
                         <p class="section-text">
                             Во время всей поездки участники находятся под постоянным сопровождением и поддержкой опытных кураторов.
@@ -458,15 +971,15 @@
                         </p>
                         <div class="safety-checkpoints">
                             <div class="checkpoint">
-                                <span class="check-icon">🛡️</span>
-                                <div>
+                                <span class="check-icon"><i class="ph ph-shield-check"></i></span>
+                                <div class="checkpoint-body">
                                     <h4>Поддержка 24/7</h4>
                                     <p>Мы на связи в любой момент дня и ночи, готовые решить любой вопрос.</p>
                                 </div>
                             </div>
                             <div class="checkpoint">
-                                <span class="check-icon">🏥</span>
-                                <div>
+                                <span class="check-icon"><i class="ph ph-first-aid-kit"></i></span>
+                                <div class="checkpoint-body">
                                     <h4>Медицинское сопровождение</h4>
                                     <p>Помощь при любых недомоганиях и сопровождение к врачу при необходимости.</p>
                                 </div>
@@ -488,18 +1001,18 @@
                             Наш лагерь подходит не только подросткам, но и взрослым участникам, интересующимся китайским языком, древней культурой и современным динамичным Китаем.
                         </p>
                         <p class="section-text text-light-gray">
-                            Для участников старше 18 лет дополнительно планируется посещение знаменитого **Циндаоского пивного фестиваля** — одного из крупнейших культурных и фестивальных событий Азии!
+                            Для участников старше 18 лет дополнительно планируется посещение знаменитого <strong>Циндаоского пивного фестиваля</strong> — одного из крупнейших культурных и фестивальных событий Азии!
                         </p>
                         <div class="adults-features">
-                            <span class="adult-chip">🍺 Легендарный пивной фестиваль Циндао</span>
-                            <span class="adult-chip">🍢 Колоритная уличная еда и морепродукты</span>
-                            <span class="adult-chip">🎸 Живая музыка и международная атмосфера</span>
-                            <span class="adult-chip">🌃 Знакомство с ночной городской жизнью Китая</span>
+                            <span class="adult-chip"><i class="ph ph-beer-stein"></i> Легендарный пивной фестиваль Циндао</span>
+                            <span class="adult-chip"><i class="ph ph-bowl-food"></i> Колоритная уличная еда и морепродукты</span>
+                            <span class="adult-chip"><i class="ph ph-music-notes"></i> Живая музыка и международная атмосфера</span>
+                            <span class="adult-chip"><i class="ph ph-moon"></i> Знакомство с ночной городской жизнью Китая</span>
                         </div>
                     </div>
                     
                     <div class="adults-image hover-zoom-effect">
-                        <img src="Telegram Desktop/photo_12_2026-05-28_18-41-00.jpg" alt="Циндаоский пивной фестиваль" loading="lazy">
+                        <img src="Telegram Desktop/photo_12_2026-05-28_18-41-00.webp" alt="Циндаоский пивной фестиваль" loading="lazy">
                         <div class="image-overlay-glow"></div>
                     </div>
                 </div>
@@ -521,19 +1034,19 @@
                         <h3 class="target-title">Идеально подходит:</h3>
                         <ul class="target-list">
                             <li>
-                                <span class="bullet">✓</span>
+                                <span class="bullet"><i class="ph ph-check-circle"></i></span>
                                 <div>
                                     <strong>Подросткам</strong> — которые хотят обрести самостоятельность, новых друзей и мотивацию говорить.
                                 </div>
                             </li>
                             <li>
-                                <span class="bullet">✓</span>
+                                <span class="bullet"><i class="ph ph-check-circle"></i></span>
                                 <div>
                                     <strong>Студентам</strong> — желающим прочувствовать китайскую университетскую атмосферу и крутой нетворкинг.
                                 </div>
                             </li>
                             <li>
-                                <span class="bullet">✓</span>
+                                <span class="bullet"><i class="ph ph-check-circle"></i></span>
                                 <div>
                                     <strong>Взрослым и начинающим</strong> — кто хочет преодолеть языковой барьер, влюбиться в культуру и начать говорить.
                                 </div>
@@ -546,13 +1059,13 @@
                         <h3 class="target-title">Не подходит:</h3>
                         <ul class="target-list">
                             <li>
-                                <span class="bullet">✕</span>
+                                <span class="bullet"><i class="ph ph-x-circle"></i></span>
                                 <div>
                                     <strong>Любителям пассивного отдыха</strong> — тем, кто хочет только лежать на пляже у моря и избегает активностей.
                                 </div>
                             </li>
                             <li>
-                                <span class="bullet">✕</span>
+                                <span class="bullet"><i class="ph ph-x-circle"></i></span>
                                 <div>
                                     <strong>Тем, кто не готов к активной программе</strong> — программа насыщенная, требует участия в челленджах и командных играх.
                                 </div>
@@ -563,17 +1076,16 @@
             </div>
         </section>
 
-        <!-- 10 ЭКРАН — ОБО МНЕ / ОРГАНИЗАТОРЕ -->
-        <section class="organizer-section section-padding bg-green-soft" id="about-me">
+        <!-- 10 ЭКРАН — ОРГАНИЗАТОР -->
+        <section class="organizer-section section-padding" id="about-me">
             <div class="container">
                 <div class="organizer-grid">
                     <div class="organizer-left hover-zoom-effect">
-                        <img src="Telegram Desktop/photo_7_2026-05-28_18-41-00.jpg" alt="Милена — преподаватель китайского" loading="lazy">
+                        <img src="Telegram Desktop/photo_7_2026-05-28_18-41-00.webp" alt="Милена — преподаватель китайского" loading="lazy">
                         <div class="organizer-tag-badge">Организатор</div>
                     </div>
                     
                     <div class="organizer-right">
-                        <span class="section-tag">Приветствие</span>
                         <h2 class="section-title">Давайте знакомиться!</h2>
                         <div class="organizer-bio">
                             <p class="section-lead">
@@ -600,9 +1112,9 @@
             </div>
         </section>
 
-        <!-- ИНТЕРАКТИВНАЯ ГАЛЕРЕЯ АТМОСФЕРЫ (Дополнительные живые фото) -->
+        <!-- ИНТЕРАКТИВНАЯ ГАЛЕРЕЯ АТМОСФЕРЫ (ПОЛНОФОРМАТНАЯ ЭСТЕТИЧЕСКАЯ СЕТКА) -->
         <section class="live-gallery-section section-padding">
-            <div class="container">
+            <div class="container-fluid gallery-fluid-container">
                 <div class="section-header text-center">
                     <span class="section-tag">Живые кадры</span>
                     <h2 class="section-title">Атмосфера наших приключений</h2>
@@ -611,25 +1123,28 @@
                 
                 <div class="gallery-grid-live">
                     <div class="gallery-live-item hover-zoom-effect">
-                        <img src="Telegram Desktop/photo_2_2026-05-28_19-31-11.jpg" alt="Красота природы Циндао" loading="lazy">
+                        <img src="Telegram Desktop/photo_2_2026-05-28_18-41-00.webp" alt="Студенческая жизнь в кампусе лагеря" loading="lazy">
                     </div>
                     <div class="gallery-live-item hover-zoom-effect">
-                        <img src="Telegram Desktop/photo_3_2026-05-28_19-31-11.jpg" alt="Вид на кампус с высоты" loading="lazy">
+                        <img src="Telegram Desktop/photo_3_2026-05-28_18-41-00.webp" alt="Пляжный отдых участников лагеря" loading="lazy">
                     </div>
                     <div class="gallery-live-item hover-zoom-effect">
-                        <img src="Telegram Desktop/photo_4_2026-05-28_19-31-11.jpg" alt="Современный купол стадиона" loading="lazy">
+                        <img src="Telegram Desktop/photo_5_2026-05-28_18-41-00.webp" alt="Современные небоскребы вечернего Циндао" loading="lazy">
                     </div>
                     <div class="gallery-live-item hover-zoom-effect">
-                        <img src="Telegram Desktop/photo_13_2026-05-28_18-41-00.jpg" alt="Общение участников" loading="lazy">
+                        <img src="Telegram Desktop/photo_8_2026-05-28_18-41-00.webp" alt="Мастер-класс по китайской каллиграфии" loading="lazy">
                     </div>
                     <div class="gallery-live-item hover-zoom-effect">
-                        <img src="Telegram Desktop/photo_14_2026-05-28_18-41-00.jpg" alt="Вкусная еда" loading="lazy">
+                        <img src="Telegram Desktop/photo_9_2026-05-28_18-41-00.webp" alt="Живописные пляжи и горы Циндао" loading="lazy">
                     </div>
                     <div class="gallery-live-item hover-zoom-effect">
-                        <img src="Telegram Desktop/photo_15_2026-05-28_18-41-00.jpg" alt="Городской вайб" loading="lazy">
+                        <img src="Telegram Desktop/photo_13_2026-05-28_18-41-00.webp" alt="Дружная команда участников на пляже" loading="lazy">
                     </div>
                     <div class="gallery-live-item hover-zoom-effect">
-                        <img src="Telegram Desktop/photo_16_2026-05-28_18-41-00.jpg" alt="Море Циндао" loading="lazy">
+                        <img src="Telegram Desktop/photo_14_2026-05-28_18-41-00.webp" alt="Мастер-класс по лепке пельменей цзяоцзы" loading="lazy">
+                    </div>
+                    <div class="gallery-live-item hover-zoom-effect">
+                        <img src="Telegram Desktop/photo_15_2026-05-28_18-41-00.webp" alt="Морская прогулка у Олимпийской гавани" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -739,15 +1254,15 @@
                         
                         <div class="apply-features">
                             <div class="apply-feat-item">
-                                <span class="apply-feat-icon">📑</span>
-                                <div>
+                                <span class="apply-feat-icon"><i class="ph ph-file-text"></i></span>
+                                <div class="apply-feat-body">
                                     <h5>Подробный PDF-буклет</h5>
                                     <p>Вышлем полную программу со всеми экскурсиями и деталями.</p>
                                 </div>
                             </div>
                             <div class="apply-feat-item">
-                                <span class="apply-feat-icon">💬</span>
-                                <div>
+                                <span class="apply-feat-icon"><i class="ph ph-chat-circle"></i></span>
+                                <div class="apply-feat-body">
                                     <h5>Бесплатная консультация</h5>
                                     <p>Расскажем про перелет, визы, безопасность и организацию.</p>
                                 </div>
@@ -758,19 +1273,19 @@
                     <div class="apply-right">
                         <form class="apply-form" id="apply-form" action="#" method="POST">
                             <div class="form-group">
-                                <label for="form-name" class="form-label">Ваше имя <span class="required-star">*</span></label>
+                                <label for="form-name" class="form-label">Ваше имя</label>
                                 <input type="text" id="form-name" class="form-input" placeholder="Иван Иванов" autocomplete="name" required>
                                 <span class="form-error-msg">Пожалуйста, введите ваше имя</span>
                             </div>
                             
                             <div class="form-group">
-                                <label for="form-age" class="form-label">Ваш возраст <span class="required-star">*</span></label>
+                                <label for="form-age" class="form-label">Ваш возраст</label>
                                 <input type="number" id="form-age" class="form-input" min="12" max="99" placeholder="18" inputmode="numeric" pattern="[0-9]*" autocomplete="bday-age" required>
                                 <span class="form-error-msg">Пожалуйста, введите корректный возраст</span>
                             </div>
                             
                             <div class="form-group">
-                                <label for="form-contact" class="form-label">Номер телефона / Telegram / WhatsApp <span class="required-star">*</span></label>
+                                <label for="form-contact" class="form-label">Номер телефона / Telegram / WhatsApp</label>
                                 <input type="text" id="form-contact" class="form-input" placeholder="+7 (999) 123-45-67 или @telegram_username" autocomplete="tel" required>
                                 <span class="form-error-msg">Пожалуйста, укажите ваши контакты для связи</span>
                             </div>
@@ -819,7 +1334,7 @@
     <div class="modal-overlay" id="success-modal">
         <div class="modal-card">
             <div class="modal-close" id="modal-close">&times;</div>
-            <div class="modal-icon">🎉</div>
+            <div class="modal-icon"><i class="ph ph-sparkles"></i></div>
             <h3 class="modal-title">Заявка успешно отправлена!</h3>
             <p class="modal-desc">
                 Спасибо за интерес к нашему лагерю! Милена свяжется с вами в Telegram или по указанному телефону в ближайшее время (обычно в течение 1-2 часов), ответит на все вопросы и вышлет подробную программу в PDF.
