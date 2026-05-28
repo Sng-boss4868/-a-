@@ -11,12 +11,14 @@ document.addEventListener('DOMContentLoaded', () => {
        ========================================================================== */
     const menuToggle = document.getElementById('menu-toggle');
     const navMenu = document.getElementById('nav-menu');
+    const navBackdrop = document.getElementById('nav-backdrop');
     const navLinks = document.querySelectorAll('.nav-link');
 
     if (menuToggle && navMenu) {
         menuToggle.addEventListener('click', () => {
             menuToggle.classList.toggle('active');
             navMenu.classList.toggle('open');
+            if (navBackdrop) navBackdrop.classList.toggle('open');
             document.body.classList.toggle('menu-open');
         });
 
@@ -25,9 +27,20 @@ document.addEventListener('DOMContentLoaded', () => {
             link.addEventListener('click', () => {
                 menuToggle.classList.remove('active');
                 navMenu.classList.remove('open');
+                if (navBackdrop) navBackdrop.classList.remove('open');
                 document.body.classList.remove('menu-open');
             });
         });
+
+        // Click outside on backdrop to close mobile drawer
+        if (navBackdrop) {
+            navBackdrop.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navMenu.classList.remove('open');
+                navBackdrop.classList.remove('open');
+                document.body.classList.remove('menu-open');
+            });
+        }
     }
 
     /* ==========================================================================
@@ -50,6 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     window.addEventListener('scroll', () => {
         let scrollY = window.pageYOffset;
+        const isBottom = (window.innerHeight + window.scrollY) >= (document.documentElement.scrollHeight - 60);
         
         sections.forEach(current => {
             const sectionHeight = current.offsetHeight;
@@ -59,10 +73,18 @@ document.addEventListener('DOMContentLoaded', () => {
             const activeNavLink = document.querySelector(`.nav-menu a[href*=${sectionId}]`);
             
             if (activeNavLink) {
-                if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                    activeNavLink.classList.add('active');
+                if (isBottom) {
+                    if (sectionId === 'faq') {
+                        activeNavLink.classList.add('active');
+                    } else {
+                        activeNavLink.classList.remove('active');
+                    }
                 } else {
-                    activeNavLink.classList.remove('active');
+                    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                        activeNavLink.classList.add('active');
+                    } else {
+                        activeNavLink.classList.remove('active');
+                    }
                 }
             }
         });
@@ -394,7 +416,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Close all other accordion items
             document.querySelectorAll('.faq-item').forEach(item => {
                 if (item !== faqItem) {
-                    item.classList.remove('active');
+                    item.classList.remove('expanded');
                     const content = item.querySelector('.faq-content');
                     if (content) content.style.maxHeight = null;
                     const trig = item.querySelector('.faq-trigger');
@@ -405,13 +427,18 @@ document.addEventListener('DOMContentLoaded', () => {
             // Toggle current accordion
             if (isExpanded) {
                 trigger.setAttribute('aria-expanded', 'false');
-                faqItem.classList.remove('active');
+                faqItem.classList.remove('expanded');
                 faqContent.style.maxHeight = null;
             } else {
                 trigger.setAttribute('aria-expanded', 'true');
-                faqItem.classList.add('active');
+                faqItem.classList.add('expanded');
                 // Set height to scrollHeight for smooth vertical slide animation
                 faqContent.style.maxHeight = faqContent.scrollHeight + "px";
+                
+                // Smoothly scroll the expanded accordion item into view
+                setTimeout(() => {
+                    faqItem.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 300); // slight delay to allow vertical expand animation to start/complete
             }
         });
     });
@@ -542,5 +569,22 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.fade-in-up').forEach(el => {
             el.classList.add('active');
         });
+    }
+
+    // ==========================================================================
+    // SUSTAINABLE BACKGROUND VIDEO AUTO-PAUSE (UI/UX PRO MAX SUSTAINABILITY RULE 96)
+    // ==========================================================================
+    const heroVideo = document.getElementById('hero-video');
+    if (heroVideo && 'IntersectionObserver' in window) {
+        const videoObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    heroVideo.play().catch(() => {}); // Resume playback when visible
+                } else {
+                    heroVideo.pause(); // Pause playback when off-screen to save client resources
+                }
+            });
+        }, { threshold: 0.1 });
+        videoObserver.observe(heroVideo);
     }
 });

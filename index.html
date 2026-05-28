@@ -50,6 +50,7 @@
             </div>
         </div>
     </header>
+    <div class="nav-backdrop" id="nav-backdrop"></div>
 
     <main>
         
@@ -57,7 +58,7 @@
         <section class="hero-section" id="hero">
             <!-- Видео-подложка, если есть видео -->
             <div class="hero-video-container">
-                <video autoplay muted loop playsinline class="hero-video">
+                <video autoplay muted loop playsinline class="hero-video" id="hero-video">
                     <source src="Telegram Desktop/IMG_1134.MOV" type="video/mp4">
                     <!-- Заглушка, если видео не поддерживается -->
                 </video>
@@ -105,7 +106,7 @@
                         <span class="stat-txt">море, учеба, город</span>
                     </div>
                     <div class="bottom-stat">
-                        <span class="stat-num">0+</span>
+                        <span class="stat-num">0<span class="plus-sign">+</span></span>
                         <span class="stat-txt">любой уровень языка</span>
                     </div>
                 </div>
@@ -331,9 +332,9 @@
                     <div class="timeline-line"></div>
                     
                     <!-- Утро -->
-                    <div class="timeline-step step-left hover-zoom-effect">
+                    <div class="timeline-step step-left">
                         <div class="step-num">01</div>
-                        <div class="step-content">
+                        <div class="step-content hover-zoom-effect">
                             <span class="step-time">Утро (09:00 - 12:00)</span>
                             <h3 class="step-title">Занятия и языковая практика</h3>
                             <p class="step-desc">
@@ -343,9 +344,9 @@
                     </div>
                     
                     <!-- День -->
-                    <div class="timeline-step step-right hover-zoom-effect">
+                    <div class="timeline-step step-right">
                         <div class="step-num">02</div>
-                        <div class="step-content">
+                        <div class="step-content hover-zoom-effect">
                             <span class="step-time">День (13:00 - 17:00)</span>
                             <h3 class="step-title">Экскурсии, мастер-классы и активности</h3>
                             <p class="step-desc">
@@ -355,9 +356,9 @@
                     </div>
                     
                     <!-- Вечер -->
-                    <div class="timeline-step step-left hover-zoom-effect">
+                    <div class="timeline-step step-left">
                         <div class="step-num">03</div>
-                        <div class="step-content">
+                        <div class="step-content hover-zoom-effect">
                             <span class="step-time">Вечер (18:00 - 21:00)</span>
                             <h3 class="step-title">Общение, челленджи, прогулки, свечки</h3>
                             <p class="step-desc">
@@ -757,20 +758,20 @@
                     <div class="apply-right">
                         <form class="apply-form" id="apply-form" action="#" method="POST">
                             <div class="form-group">
-                                <label for="form-name" class="form-label">Ваше имя</label>
-                                <input type="text" id="form-name" class="form-input" placeholder="Иван Иванов" required>
+                                <label for="form-name" class="form-label">Ваше имя <span class="required-star">*</span></label>
+                                <input type="text" id="form-name" class="form-input" placeholder="Иван Иванов" autocomplete="name" required>
                                 <span class="form-error-msg">Пожалуйста, введите ваше имя</span>
                             </div>
                             
                             <div class="form-group">
-                                <label for="form-age" class="form-label">Ваш возраст</label>
-                                <input type="number" id="form-age" class="form-input" min="12" max="99" placeholder="18" required>
+                                <label for="form-age" class="form-label">Ваш возраст <span class="required-star">*</span></label>
+                                <input type="number" id="form-age" class="form-input" min="12" max="99" placeholder="18" inputmode="numeric" pattern="[0-9]*" autocomplete="bday-age" required>
                                 <span class="form-error-msg">Пожалуйста, введите корректный возраст</span>
                             </div>
                             
                             <div class="form-group">
-                                <label for="form-contact" class="form-label">Номер телефона / Telegram / WhatsApp</label>
-                                <input type="text" id="form-contact" class="form-input" placeholder="+7 (999) 123-45-67 или @telegram_username" required>
+                                <label for="form-contact" class="form-label">Номер телефона / Telegram / WhatsApp <span class="required-star">*</span></label>
+                                <input type="text" id="form-contact" class="form-input" placeholder="+7 (999) 123-45-67 или @telegram_username" autocomplete="tel" required>
                                 <span class="form-error-msg">Пожалуйста, укажите ваши контакты для связи</span>
                             </div>
                             
